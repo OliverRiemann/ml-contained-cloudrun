@@ -44,10 +44,10 @@ class CodeClassifierBiLSTM_Attn(nn.Module):
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-with open("vocab.pickle", "rb") as f:
+with open("app/vocab.pickle", "rb") as f:
     vocab = pickle.load(f)
 
-with open("label_encoder.pickle", "rb") as f:
+with open("app/label_encoder.pickle", "rb") as f:
     label_encoder = pickle.load(f)
 
 model = CodeClassifierBiLSTM_Attn(
