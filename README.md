@@ -57,9 +57,9 @@ curl -X POST https://ml-contained-cloudrun-server-93066594793.us-central1.run.ap
 docker build -t ml-api .
 
 # Run locally
-docker run -p 8080:8080 ml-api
+docker run -p 8000:8000 ml-api
 
 # Test
-curl -X POST http://localhost:8080/predict \
+curl -X POST http://localhost:8000/predict \
   -H "Content-Type: application/json" \
   -d '{"code": "def foo(): return 42"}'
